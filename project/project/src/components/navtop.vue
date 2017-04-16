@@ -90,6 +90,7 @@ export default{
 		font-size: 1.6rem;
 	}
 	.navtop .moudlelist h2{
+		font-weight: normal;
 		margin-top: 1rem;
 		margin-left: 0.8rem;
 		float: left;

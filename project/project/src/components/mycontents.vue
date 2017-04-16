@@ -1,10 +1,12 @@
 <template>
-	<div class="contents">
+	<div class="mycontents">
 		<p>今日热闻</p>
 		<ul>
 			<li v-for="item in items">
-				<p>{{item.title}}</p>
-				<img :src="item.images">
+				<router-link to='/detail'>
+                    <p>{{item.title}}</p>
+                    <img :src="item.images">            
+                </router-link>
 			</li>
 		</ul>
 	</div>
@@ -39,8 +41,8 @@ export default {
 }
 </script>
 
-<style type="text/css">
-	.contents{
+<style type="text/css" scoped>
+	.mycontents{
 		background-color: #f3f3f3;
 		width: 20rem;
 	}
