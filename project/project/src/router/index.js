@@ -6,13 +6,17 @@ Vue.use(Router)
 export default new Router({
     routes: [{
         path: '/home',
-        component: require('../components/mainpage')
+        component: require('../components/main_page')
     }, {
         path: '/login',
-        component: require('../components/belllogin')
+        component: require('../components/bell_login')
     }, {
         path: '/',
-        component: require('../components/mainpage')
+        component: require('../components/main_page')
+    }, {
+        path: '/detail/:id',
+        name: 'detail',
+        component: require('../components/details')
     }
     ]
 })

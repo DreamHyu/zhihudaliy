@@ -6,16 +6,14 @@
 </template>
 
 <script>
-import navtop from '../../components/navtop.vue'
-import hello from './hello'
-import showPic from '../../components/showPic.vue'
-import contents from '../../components/contents.vue'
+import navTop from '../../components/nav_top.vue'
+import showPic from '../../components/show_pic.vue'
+import myContents from '../../components/my_contents.vue'
 export default {
     components: {
-        hello,
-        navtop,
+        navTop,
         showPic,
-        contents
+        myContents
     }
 }
 </script>
