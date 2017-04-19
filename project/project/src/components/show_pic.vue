@@ -60,7 +60,7 @@ export default{
 		position: relative;
 		width: 20rem;
 		height: 11.9rem;
-		background-color: red;
+		background-color: #fff;
 	}
 	.showpic img{
 		position: absolute;

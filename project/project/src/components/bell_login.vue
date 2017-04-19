@@ -25,10 +25,7 @@ export default{
         }
     },
     created: function () {
-        this.$http.get('api/news/9356369')
-        .then(function (res) {
-            console.log(res.data)
-        })
+        console.log(document.documentElement.clientHeight)
     }
 }
 </script>

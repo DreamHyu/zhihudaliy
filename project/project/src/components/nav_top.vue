@@ -1,7 +1,7 @@
 <template>
-	<div class="navtop" v-bind:class="{'box':isB}">
-		<button class="siderbtn" v-on:click="side(isA, isB)"></button>
-		<div v-bind:class = "{'leftSider':isA,'outleftSider':isB}">
+	<div class="navtop" v-bind:class="{'box':isOut}">
+		<button class="siderbtn" v-on:click="side(isIn, isOut)"></button>
+		<div v-bind:class = "{'leftSider':isIn,'outleftSider':isOut}">
 			<div class="sidetop">
 				<div class="login">	
 					<img src="../../static/img/sidepic.jpg">
@@ -14,8 +14,8 @@
 					<h1>离线下载</h1>
 				</div>
 				<div class="back">
-					<button class="backbtn" v-on:click="back(isA, isB)"></button>
-					<h2 v-on:click="back(isA, isB)">首页</h2>
+					<button class="backbtn" v-on:click="back(isIn, isOut)"></button>
+					<h2 v-on:click="back(isIn, isOut)">首页</h2>
 				</div>
 				<div class="moudlelist">
 					<li>
@@ -40,19 +40,19 @@ export default{
     data: function () {
         return {
             point: '首页',
-            isA: true,
-            isB: false,
+            isIn: true,
+            isOut: false,
             isShow: false
         }
     },
     methods: {
-        side: function (isB, isA) {
-            this.isA = true
-            this.isB = true
+        side: function (isOut, isIn) {
+            this.isIn = true
+            this.isOut = true
         },
-        back: function (isB, isA) {
-            this.isA = true
-            this.isB = false
+        back: function (isOut, isIn) {
+            this.isIn = true
+            this.isOut = false
         },
         more: function (isShow) {
             this.isShow = !this.isShow
@@ -60,6 +60,15 @@ export default{
         backmore: function (isShow) {
             this.isShow = !this.isShow
         }
+    },
+    created: function () {
+        let str = 'nihao'
+        this.$store.commit('setTopTitle', str)
+        console.log(this.$store.state.topTitle)
+    },
+    mounted: function () {
+        let x = document.getElementsByClassName('navtop')[0]
+        console.log(x.offsetHeight)
     }
 }
 </script>
@@ -168,7 +177,7 @@ export default{
 	}
 	.sidetop{
 		width: 16.9rem;
-		height: 5.9rem;
+		height: 35rem;
 		background-color: #00a2ed;
 	}
 	.navtop {
