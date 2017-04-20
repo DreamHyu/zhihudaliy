@@ -25,7 +25,7 @@
 				</div>
 			</div>
 		</div>
-		<h1>{{point}}</h1>
+		<h1>{{this.$store.state.topTitle}}</h1>
 		<button class="morebtn" v-on:click="more(isShow)"></button>
 		<div class="more" v-show="isShow" v-on:click="backmore(isShow)">
 			<h3>夜间模式</h3>
@@ -39,37 +39,28 @@
 export default{
     data: function () {
         return {
-            point: '首页',
             isIn: true,
             isOut: false,
             isShow: false
         }
     },
     methods: {
-        side: function (isOut, isIn) {
+        side: function (isOut, isIn) {    // 控制侧边栏
             this.isIn = true
             this.isOut = true
         },
-        back: function (isOut, isIn) {
+        back: function (isOut, isIn) {    // 侧边栏返回首页
             this.isIn = true
             this.isOut = false
         },
-        more: function (isShow) {
+        more: function (isShow) {    // 跳到登陆界面
             this.isShow = !this.isShow
         },
-        backmore: function (isShow) {
+        backmore: function (isShow) {    // 更多
             this.isShow = !this.isShow
         }
     },
-    created: function () {
-        let str = 'nihao'
-        this.$store.commit('setTopTitle', str)
-        console.log(this.$store.state.topTitle)
-    },
-    mounted: function () {
-        let x = document.getElementsByClassName('navtop')[0]
-        console.log(x.offsetHeight)
-    }
+    created: function () {}
 }
 </script>
 

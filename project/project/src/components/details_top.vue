@@ -7,7 +7,7 @@
                 <button class="collect"></button>
                 <button class="discuss"></button>
                 <span>{{extraDetail.short_comments}}</span>
-                <button class="approve"></button>
+                <button class="approve" @click='changePopularity'></button>
                 <span>{{extraDetail.popularity}}</span>
             </div>
         </div>
@@ -67,7 +67,7 @@ export default{
         }
     },
     methods: {
-        back: function () {
+        back: function () {    // 返回主界面
             router.push('/home')
         },
         changeImageUrl: function (srcUrl) {
@@ -76,12 +76,15 @@ export default{
                 return srcUrl.replace(/http\w{0,1}:\/\/p/g, 'https://images.weserv.nl/?url=p')
             }
         },
-        isShow: function () {
+        isShow: function () {    // 分享栏的显示
             this.isShowWith = !this.isShowWith
             this.isZhezhao = !this.isZhezhao
         },
-        Collect: function () {
+        Collect: function () {    // 收藏与否，样式改变
             this.isCollect = !this.isCollect
+        },
+        changePopularity: function () {    // 点赞
+            this.extraDetail.popularity = this.extraDetail.popularity + 1
         }
     },
     created: function () {
@@ -89,12 +92,12 @@ export default{
         this.extraDetail
         this.detailId = this.$route.path.slice(8)
         let self = this
-        this.$http.get('api/news/' + this.detailId)
+        self.$http.get('api/news/' + self.detailId)
         .then(function (res) {
             res.data.image = self.changeImageUrl(res.data.image)
             self.detailContent = res.data
         })
-        this.$http.get('api/story-extra/' + this.detailId)
+        self.$http.get('api/story-extra/' + self.detailId)
         .then(function (extraRes) {
             self.extraDetail = extraRes.data
         })

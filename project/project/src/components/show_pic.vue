@@ -1,59 +1,90 @@
 <template>
 	<div class="showpic">
-		<img :src='dizhi'>
-		<h1></h1>
-		<div class="circle">
-			<ul>
-				<li :class="{'circlechange':lichange[0]}"></li>
-				<li :class="{'circlechange':lichange[1]}"></li>
-				<li :class="{'circlechange':lichange[2]}"></li>
-				<li :class="{'circlechange':lichange[3]}"></li>
-				<li :class="{'circlechange':lichange[4]}"></li>
-				<div class="cleanfix"></div>
-			</ul>
-		</div>
-	</div>
+        <router-link :to="{ name: 'detail', params: { id: picId}}"><div class="showpicRouter">
+            <img :src='dizhi'>
+    		<h1>{{picTitle}}</h1>
+    		<div class="circle">
+    			<ul>
+    				<li :class="{'circlechange':lichange[0]}"></li>
+    				<li :class="{'circlechange':lichange[1]}"></li>
+    				<li :class="{'circlechange':lichange[2]}"></li>
+    				<li :class="{'circlechange':lichange[3]}"></li>
+    				<li :class="{'circlechange':lichange[4]}"></li>
+    				<div class="cleanfix"></div>
+    			</ul>
+    		</div>
+	    </div></router-link>
+    </div>
 </template>
 
 <script type="text/javascript">
 export default{
     data: function () {
         return {
-            imgofsrc: ['../../static/img/img1.png',
-                '../../static/img/img2.png',
-                '../../static/img/img3.png',
-                '../../static/img/img4.png',
-                '../../static/img/img5.png'],
-            dizhi: '../../static/img/img1.png',
+            dizhi: '',
             lichange: [false, false, false, false, false],
-            i: 0
+            i: 0,
+            topStories: [{id: '', image: '', title: ''}],
+            picTitle: '',
+            picId: ''
         }
     },
     created: function () {
-        this.lichange[0] = true
-        this.dizhi = this.imgofsrc[0]
+        this.topStories
         let self = this
-        setInterval(function () {
+        self.$http.get('api/news/latest')
+        .then(function (res) {
             for (let a = 0; a < 5; a++) {
-                self.lichange[a] = false
+                res.data.top_stories[a].image = self.changeImageUrl(res.data.top_stories[a].image)
             }
-            self.i++
-            if (self.i >= 5) {
-                self.i = 0
-                self.dizhi = self.imgofsrc[0]
-                self.lichange[0] = true
+            self.topStories = res.data.top_stories
+            self.lichange[0] = true
+            self.picTitle = self.topStories[0].title
+            self.dizhi = self.topStories[0].image
+            self.picId = self.topStories[0].id
+            setInterval(self.topStoriesSort, 10000)
+        })
+    },
+    methods: {
+        topStoriesSort: function () {    // 轮播图
+            this.lichange
+            this.dizhi
+            this.topStories
+            this.picId
+            for (let a = 0; a < 5; a++) {
+                this.lichange[a] = false
+            }
+            this.i++
+            if (this.i >= 5) {
+                this.i = 0
+                this.dizhi = this.topStories[this.i].image
+                this.picId = this.topStories[this.i].id
+                this.picTitle = this.topStories[this.i].title
+                this.lichange[0] = true
             } else {
-                self.dizhi = self.imgofsrc[self.i]
-                self.lichange[self.i] = true
+                this.dizhi = this.topStories[this.i].image
+                this.picId = this.topStories[this.i].id
+                this.picTitle = this.topStories[this.i].title
+                this.lichange[this.i] = true
             }
-        }, 10000)
+        },
+        changeImageUrl: function (srcUrl) {    // 改变图片链接
+            if (srcUrl !== undefined) {
+                srcUrl = srcUrl + ''
+                return srcUrl.replace(/http\w{0,1}:\/\/p/g, 'https://images.weserv.nl/?url=p')
+            }
+        }
     }
 }
 </script>
 
 <style type="text/css" scoped>
+    .showpicRouter{
+        width: 20rem;
+        height: 11.9rem;
+    }
 	.circlechange{
-		background-color: red;
+		background-color: #fff;
 	}
 	.showpic{
         margin-top: 3rem;
@@ -96,6 +127,6 @@ export default{
 		width: 0.4rem;
 		height: 0.4rem;
 		border-radius: 0.3rem;
-		background-color: blue;
+		background-color: #333;
 	}
 </style>
