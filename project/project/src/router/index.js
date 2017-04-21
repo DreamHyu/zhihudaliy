@@ -17,6 +17,10 @@ export default new Router({
         path: '/detail/:id',
         name: 'detail',
         component: require('../components/details')
+    }, {
+        path: '/themes/:theme',
+        name: 'theme',
+        component: require('../components/theme')
     }
     ]
 })

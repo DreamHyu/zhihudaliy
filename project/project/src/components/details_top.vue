@@ -63,6 +63,7 @@ export default{
             isShowWith: false,
             isCollect: false,
             isZhezhao: false,
+            isDianzhan: false,
             extraDetail: {'long_comments': '', 'popularity': '', 'short_comments': '', 'comments': ''}
         }
     },
@@ -84,7 +85,12 @@ export default{
             this.isCollect = !this.isCollect
         },
         changePopularity: function () {    // 点赞
-            this.extraDetail.popularity = this.extraDetail.popularity + 1
+            if (!this.isDianzhan) {
+                this.extraDetail.popularity++
+            } else {
+                this.extraDetail.popularity--
+            }
+            this.isDianzhan = !this.isDianzhan
         }
     },
     created: function () {
