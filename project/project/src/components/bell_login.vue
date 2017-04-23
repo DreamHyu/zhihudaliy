@@ -24,9 +24,7 @@ export default{
             router.push('/home')
         }
     },
-    created: function () {
-        console.log(document.documentElement.clientHeight)
-    }
+    created: function () {}
 }
 </script>
 

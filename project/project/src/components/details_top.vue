@@ -5,7 +5,7 @@
             <div class="topright">
                 <button class="share"  @click='isShow()'></button>
                 <button class="collect"></button>
-                <button class="discuss"></button>
+                <router-link :to="{ name: 'comments', params: { id: detailId}}"><button class="discuss"></button> </router-link>
                 <span>{{extraDetail.short_comments}}</span>
                 <button class="approve" @click='changePopularity'></button>
                 <span>{{extraDetail.popularity}}</span>

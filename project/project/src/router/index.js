@@ -21,6 +21,10 @@ export default new Router({
         path: '/themes/:theme',
         name: 'theme',
         component: require('../components/theme')
+    }, {
+        path: '/comments/:id',
+        name: 'comments',
+        component: require('../components/comments')
     }
     ]
 })

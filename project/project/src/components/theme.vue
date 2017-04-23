@@ -29,6 +29,7 @@
 </template>
 
 <script type="text/javascript">
+import router from '../router/index.js'
 export default {
     data: function () {
         return {
@@ -66,6 +67,9 @@ export default {
                 srcUrl = srcUrl + ''
                 return srcUrl.replace(/http\w{0,1}:\/\/p/g, 'https://images.weserv.nl/?url=p')
             }
+        },
+        back: function () {    // 返回主界面
+            router.push('/home')
         }
     }
 }
