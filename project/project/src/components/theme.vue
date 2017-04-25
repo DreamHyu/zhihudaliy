@@ -80,14 +80,14 @@ export default {
 </script>
 
 <style type="text/css" scoped>
-    .top{
+    .top {
         padding-top: 1rem;
         padding-bottom: 0.9rem;
         width: 20rem;
         height: 1.1rem;
         background-color: #00a2ed;
     }
-    .back{
+    .back {
         float: left;
         margin-left: 1rem;
         background-image: url(../../static/img/siderbtn.gif);
@@ -111,22 +111,22 @@ export default {
         background-color: #fff;
         margin-right: 0.8rem;
     }
-    .circle i{
+    .circle i {
         position: absolute;
         top:-0.3rem;
         color: #00a2ed;
         font-size: 1.8rem;
     }
-    .show-pic{
+    .show-pic {
         position: relative;
         width: 20rem;
         height: 10.5rem;
     }
-    .show-pic img{
+    .show-pic img {
         width: 20rem;
         height: 10.5rem;
     }
-    .show-pic h1{
+    .show-pic h1 {
         font-weight: normal;
         position: absolute;
         top:6.5rem;
@@ -137,7 +137,7 @@ export default {
         color: #fff;
         line-height: 1.3rem;
     }
-    .show-pic i{
+    .show-pic i {
         position: absolute;
         top:9.2rem;
         right: 0.9rem;
@@ -145,11 +145,11 @@ export default {
         font-size: 0.6rem;
         color:#b2b2af;
     }
-        .mycontents{
+        .mycontents {
         background-color: #f3f3f3;
         width: 20rem;
     }
-    h1{
+    h1 {
         margin: 0;
         font-weight: normal;
         line-height: 2.5rem;
@@ -158,10 +158,10 @@ export default {
         font-family: "Microsoft Yahei",Arial;
         font-size: 0.7rem;
     }
-    .mycontents ul{
+    .mycontents ul {
         padding-left: 0;
     }
-    ul li div{
+    ul li div {
         width: 19.1rem;
         height: 5.2rem;
         background-color: #fff;
@@ -171,7 +171,7 @@ export default {
         margin-bottom: 0.2rem;
         border-bottom: 0.05rem solid #c9c9c9;
     }
-    ul li div img{
+    ul li div img {
         width: 4.5rem;
         height: 3.8rem;
         float: right;
@@ -199,7 +199,7 @@ export default {
         margin-bottom: 0.2rem;
         border-bottom: 0.05rem solid #c9c9c9;
     }
-    .no-pic img{
+    .no-pic img {
         width: 0rem;
         height: 0rem;
     }

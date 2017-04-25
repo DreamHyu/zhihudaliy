@@ -38,7 +38,7 @@ export default {
                 return srcUrl.replace(/http\w{0,1}:\/\/p/g, 'https://images.weserv.nl/?url=p')
             }
         },
-        changedateType: function () {    // 改变日期格式
+        changedateType: function () {    /* 改变日期格式 */
             let month = this.date.getMonth() + 1
             month = month < 10 ? '0' + month : '' + month
             let day = this.date.getDate()
@@ -47,15 +47,15 @@ export default {
             this.dateStr = year + month + day
             return this.dateStr
         },
-        initTime: function () {    // 初始化时间
+        initTime: function () {    /* 初始化时间 */
             this.date = new Date()
             this.changedateType()
         },
-        setNewsTime: function () {    // 设置时间
+        setNewsTime: function () {    /* 设置时间 */
             this.date.setDate(this.date.getDate() - 1)
             this.changedateType()
         },
-        dateTitle: function () {    // 板块标题
+        dateTitle: function () {    /* 板块标题 */
             this.dateStr
             let a = this.dateStr.slice(4, 6) + '月'
             let b = this.dateStr.slice(6) + '日'
@@ -89,7 +89,7 @@ export default {
             }
             this.test = a + b + d
         },
-        addNews: function () {    // 下拉刷新新闻
+        addNews: function () {    /* 下拉刷新新闻 */
             this.objs
             this.test
             this.date
@@ -110,7 +110,7 @@ export default {
                 })
             }
         },
-        changeTopTitle: function () {    // 改变nav栏的文字显示
+        changeTopTitle: function () {    /* 改变nav栏的文字显示 */
             let str = ''
             let sTop = document.body.scrollTop + document.documentElement.scrollTop
             let h1s = document.getElementsByClassName('dateTitle')
@@ -154,11 +154,11 @@ export default {
 </script>
 
 <style type="text/css" scoped>
-    .mycontents{
+    .mycontents {
         background-color: #f3f3f3;
         width: 20rem;
     }
-    h1{
+    h1 {
         margin: 0;
         font-weight: normal;
         line-height: 2.5rem;
@@ -167,10 +167,10 @@ export default {
         font-family: "Microsoft Yahei",Arial;
         font-size: 0.7rem;
     }
-    .mycontents ul{
+    .mycontents ul {
         padding-left: 0;
     }
-    ul li{
+    ul li {
         width: 19.1rem;
         height: 5.2rem;
         background-color: #fff;
@@ -180,7 +180,7 @@ export default {
         margin-bottom: 0.2rem;
         border-bottom: 0.05rem solid #c9c9c9;
     }
-    ul li img{
+    ul li img {
         width: 4.5rem;
         height: 3.8rem;
         float: right;

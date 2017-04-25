@@ -17,9 +17,6 @@ export default{
     components: {
         detailstop,
         detailscontent
-    },
-    created: function () {
-        this.detailId = this.$route.path.slice(8)
     }
 }
 </script>

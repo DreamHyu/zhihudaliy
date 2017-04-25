@@ -59,20 +59,20 @@ export default{
         }
     },
     methods: {
-        side: function (isOut, isIn) {    // 控制侧边栏
+        side: function (isOut, isIn) {    /* 控制侧边栏 */
             this.isIn = true
             this.isOut = true
             this.isZhezhao = true
         },
-        back: function (isOut, isIn) {    // 侧边栏返回首页
+        back: function (isOut, isIn) {    /* 侧边栏返回首页 */
             this.isIn = true
             this.isOut = false
             this.isZhezhao = false
         },
-        more: function (isShow) {    // 跳到登陆界面
+        more: function (isShow) {    /* 跳到登陆界面 */
             this.isShow = !this.isShow
         },
-        backmore: function (isShow) {    // 更多
+        backmore: function (isShow) {    /* 更多 */
             this.isShow = !this.isShow
         }
     },
@@ -103,10 +103,10 @@ export default{
 	    top: 0;
 	    background-color: #00a2ed;
 	}
-    template{
+    template {
         position: relative;
     }
-    .navtop .more h3{
+    .navtop .more h3 {
         font-family: "Microsoft Yahei";
         color: #000;
         line-height: 2.5rem;
@@ -115,7 +115,7 @@ export default{
         font-weight: normal;
         margin-left: 0.9rem;
     }
-    .more{
+    .more {
         position: absolute;
         right:0.2rem;
         top:0.2rem;
@@ -124,13 +124,13 @@ export default{
         z-index: 10;
         background-color: #fff;
     }
-    .moudlelist .biaoji{
+    .moudlelist .biaoji {
         float: right;
         margin-right: 3rem;
         color:#eeeeee;
         font-size: 1.6rem;
     }
-    .moudlelist h2{
+    .moudlelist h2 {
         font-weight: normal;
         margin-top: 1rem;
         margin-left: 0.8rem;
@@ -140,18 +140,18 @@ export default{
         color: #000;
         font-family: "Microsoft Yahei";
     }
-    .moudlelist li{
+    .moudlelist li {
         height: 2.6rem;
     }
     .one-theme {
     	height: 2.6rem;
     }
-    .moudlelist{
+    .moudlelist {
     	padding-top: 8.5rem;
         width: 16.9rem;
         background-color: #fff;
     }
-    .back h2{
+    .back h2 {
         font-weight: normal;
         font-family: "Microsoft Yahei",Arial;
         float: left;
@@ -162,7 +162,7 @@ export default{
         padding: 0;
         font-size: 0.9rem;
     }
-    .back button{
+    .back button {
         float: left;
         background-image: url('../../static/img/back.gif') ;
         width: 1.1rem;
@@ -170,12 +170,12 @@ export default{
         margin-top: 0.9rem;
         margin-left: 1.2rem;
     }
-    .back{
+    .back {
         width: 16.9rem;
         height: 2.6rem;
         background-color: #f0f0f0;
     }
-    .collect h1{
+    .collect h1 {
     	font-weight: normal;
     	font-family: "Microsoft yahei",arial;
         float: left;
@@ -186,34 +186,34 @@ export default{
         margin-top: 0;
         line-height: 0.6rem; 
     }
-    .collect img{
+    .collect img {
         float: left;
         margin-left: 1.4rem;
     }
-    .collect{
+    .collect {
         width: 16.9rem;
         height: 0.7rem;
         margin-top: 1.8rem;
         margin-bottom: 1rem;
     }
-    .login h1{
+    .login h1 {
         margin-left: 2.6rem;
         margin-top: 0;
         padding-top: 1rem;
         color:#fff;
     }
-    .login img{
+    .login img {
         float: left;
         margin-top: 0.5rem;
         height: 1.9rem;
         width: 1.9rem;
     }
-    .login{
+    .login {
         height: 2.4rem;
         margin-left: 0.9rem;
         width: 16rem;
     }
-    .sidetop{
+    .sidetop {
         width: 16.9rem;
         height: 35rem;
         background-color: #00a2ed;
@@ -250,7 +250,7 @@ export default{
     .outleftSider {
         left:0;
     }
-    .navtop h1{
+    .navtop h1 {
         font-weight: normal;
         float: left;
         margin-top: 0.9rem;

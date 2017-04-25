@@ -83,27 +83,27 @@ export default{
 </script>
 
 <style type="text/css" scoped>
-    .showpicRouter{
+    .showpicRouter {
         width: 20rem;
         height: 11.9rem;
     }
-	.circlechange{
+	.circlechange {
 		background-color: #fff;
 	}
-	.showpic{
+	.showpic {
         margin-top: 3rem;
 		position: relative;
 		width: 20rem;
 		height: 11.9rem;
 		background-color: #fff;
 	}
-	.showpic img{
+	.showpic img {
 		position: absolute;
 		left:0;
 		width: 20rem;
 		height: 11.9rem;
 	}
-	.showpic h1{
+	.showpic h1 {
         font-weight: normal;
 		width: 17.2rem;
 		position: absolute;
@@ -114,18 +114,18 @@ export default{
 		color: #fff;
 		font-family: "Microsoft Yahei",Arial;
 	}
-	.circle{
+	.circle {
 		width: 20rem;
 		text-align: center;	
 	}
-	.showpic ul{
+	.showpic ul {
 		position: absolute;
 		bottom: 0.5rem;
 		left:50%;
 		margin-left: -2.5rem;
 		width: 2.5rem;
 	}
-	ul li{
+	ul li {
 		margin-right: 0.1rem;
 		float: left;
 		width: 0.4rem;

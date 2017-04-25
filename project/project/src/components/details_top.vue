@@ -78,7 +78,7 @@ export default{
         }
     },
     methods: {
-        back: function () {    // 返回主界面
+        back: function () {    /* 返回主界面 */
             router.go(-1)
         },
         changeImageUrl: function (srcUrl) {
@@ -87,14 +87,14 @@ export default{
                 return srcUrl.replace(/http\w{0,1}:\/\/p/g, 'https://images.weserv.nl/?url=p')
             }
         },
-        isShow: function () {    // 分享栏的显示
+        isShow: function () {    /* 分享栏的显示 */
             this.isShowWith = !this.isShowWith
             this.isZhezhao = !this.isZhezhao
         },
-        Collect: function () {    // 收藏与否，样式改变
+        Collect: function () {    /* 收藏与否，样式改变 */
             this.isCollect = !this.isCollect
         },
-        changePopularity: function () {    // 点赞
+        changePopularity: function () {    /* 点赞 */
             if (!this.isDianzhan) {
                 this.extraDetail.popularity++
             } else {
@@ -122,14 +122,14 @@ export default{
 </script>
 
 <style type="text/css" scoped>
-    .top{
+    .top {
         padding-top: 1rem;
         padding-bottom: 0.9rem;
         width: 20rem;
         height: 1.1rem;
         background-color: #00a2ed;
     }
-    .back{
+    .back {
         float: left;
         margin-left: 1.1rem;
         background-image: url(../../static/img/loginback.gif);
@@ -137,11 +137,11 @@ export default{
         width: 0.9rem;
         height: 1rem;
     }
-    .topright{
+    .topright {
         float: right;
         width: 12.1rem;
     }
-    .topright span{
+    .topright span {
         float: left;
         padding-left: 0.4rem;
         width: 1.3rem;
@@ -149,7 +149,7 @@ export default{
         font-family: "Microsoft Yahei",Arial;
         color:#fff;
     }
-    .share{
+    .share {
         background-image: url('../../static/img/share.png');
         background-size: 1rem 1.1rem;
         width: 1rem;
@@ -157,7 +157,7 @@ export default{
         float: left;
         margin-right: 2rem;
     }
-    .collect{
+    .collect {
         background-image: url('../../static/img/collet.png');
         background-size: 1.1rem 1.1rem;
         width: 1.1rem;
@@ -165,30 +165,30 @@ export default{
         float: left;
         margin-right: 1.7rem;
     }
-    .discuss{
+    .discuss {
         background-image: url('../../static/img/dicuss.png');
         background-size: 1.1rem 1.1rem;
         width: 1.1rem;
         height: 1.1rem;
         float: left;
     }
-    .approve{
+    .approve {
         background-image: url('../../static/img/approve.png');
         background-size: 1.25rem 1.1rem;
         width: 1.25rem;
         height: 1.1rem;
         float: left;
     }
-    .show-pic{
+    .show-pic {
         position: relative;
         width: 20rem;
         height: 10.5rem;
     }
-    .show-pic img{
+    .show-pic img {
         width: 20rem;
         height: 10.5rem;
     }
-    .show-pic h1{
+    .show-pic h1 {
         font-weight: normal;
         position: absolute;
         top:6.5rem;
@@ -198,7 +198,7 @@ export default{
         color: #fff;
         line-height: 1.3rem;
     }
-    .show-pic i{
+    .show-pic i {
         position: absolute;
         top:9.2rem;
         right: 0.9rem;
@@ -206,7 +206,7 @@ export default{
         font-size: 0.6rem;
         color:#b2b2af;
     }
-    .share-with{
+    .share-with {
         position: absolute;
         z-index: 100;
         width: 17.3rem;
@@ -217,14 +217,14 @@ export default{
         margin-left: -8.65rem;
         margin-top: -9.5rem;
     }
-    .share-with h1{
+    .share-with h1 {
         font-weight: normal;
         font-family: "Microsoft Yahei", Arial;
         margin-top: 1.2rem;
         margin-left: 1.5rem;
         line-height: 1.1rem;
     }
-    .share-with ul{
+    .share-with ul {
         padding-left:0.8rem;
     }
     .share-with ul li {
@@ -232,14 +232,14 @@ export default{
         float: left;
         margin-bottom: 1.1rem;
     }
-    .share-with ul li img{
+    .share-with ul li img {
         padding-left: 0.15rem;
         padding-right: 0.15rem;
         width: 3.1rem;
         height: 2.9rem;
         margin: 0 auto；
     }
-    .share-with ul li h2{
+    .share-with ul li h2 {
         width: 3.4rem;
         font-size: 0.65rem;
         text-align: center;

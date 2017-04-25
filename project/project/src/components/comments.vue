@@ -105,7 +105,7 @@ export default {
                 return srcUrl.replace(/http\w{0,1}:\/\/p/g, 'https://images.weserv.nl/?url=p')
             }
         },
-        changedateType: function (timestamp) {
+        changedateType: function (timestamp) {   /* 改变日期格式 */
             this.date = new Date(parseInt(timestamp))
             let month = this.date.getMonth() + 1
             month = month < 10 ? '0' + month : '' + month
@@ -185,7 +185,7 @@ export default {
         padding-left: 0.4rem;
         width: 15.9rem;
     }
-    .author-name{
+    .author-name {
         line-height: 1.4rem;
         color: #000;
         margin: 0;
@@ -205,13 +205,10 @@ export default {
     .short-comments {
         border:1px solid #bfbfbf;
     }
-    .short-comments h1{
+    .short-comments h1 {
         margin: 0;
         line-height: 2.5rem;
         font-weight: normal;
         margin-left: 0.9rem;
     }
-    /*.short {
-        display: ;
-    }*/
 </style>
