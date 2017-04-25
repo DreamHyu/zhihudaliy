@@ -45,8 +45,22 @@ export default {
     data: function () {
         return {
             id: '',
-            comments: [{author: '', avatar: '', content: '', likes: '', time: '', id: ''}],
-            shortComments: [{author: '', avatar: '', content: '', likes: '', time: '', id: ''}],
+            comments: [{
+                author: '',
+                avatar: '',
+                content: '',
+                likes: '',
+                time: '',
+                id: ''
+            }],
+            shortComments: [{
+                author: '',
+                avatar: '',
+                content: '',
+                likes: '',
+                time: '',
+                id: ''
+            }],
             number: 0,
             number1: 0,
             number2: 0,

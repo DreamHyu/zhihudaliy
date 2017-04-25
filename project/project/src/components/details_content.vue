@@ -7,7 +7,12 @@ export default {
     data: function () {
         return {
             detailId: '',
-            detailContent: {body: '', image: '', title: '', imageSource: ''}
+            detailContent: {
+                body: '',
+                image: '',
+                title: '',
+                imageSource: ''
+            }
         }
     },
     methods: {

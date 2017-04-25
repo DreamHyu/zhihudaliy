@@ -21,7 +21,7 @@ import router from '../router'
 export default{
     methods: {
         back: function () {
-            router.push('/home')
+            router.go(-1)
         }
     },
     created: function () {}

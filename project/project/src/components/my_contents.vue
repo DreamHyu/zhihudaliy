@@ -18,7 +18,14 @@
 export default {
     data: function () {
         return {
-            objs: [{date: '', items: [{p: '', images: '', id: ''}]}],
+            objs: [{
+                date: '',
+                items: [{
+                    p: '',
+                    images: '',
+                    id: ''
+                }]
+            }],
             date: Date,
             dateStr: '',
             test: ''

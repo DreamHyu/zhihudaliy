@@ -25,6 +25,9 @@ export default new Router({
         path: '/comments/:id',
         name: 'comments',
         component: require('../components/comments')
+    }, {
+        path: '/detail',
+        component: require('../components/main_page')
     }
     ]
 })

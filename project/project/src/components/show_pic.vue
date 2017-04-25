@@ -24,7 +24,11 @@ export default{
             dizhi: '',
             lichange: [false, false, false, false, false],
             i: 0,
-            topStories: [{id: '', image: '', title: ''}],
+            topStories: [{
+                id: '',
+                image: '',
+                title: ''
+            }],
             picTitle: '',
             picId: ''
         }
@@ -42,7 +46,7 @@ export default{
             self.picTitle = self.topStories[0].title
             self.dizhi = self.topStories[0].image
             self.picId = self.topStories[0].id
-            setInterval(self.topStoriesSort, 10000)
+            setInterval(self.topStoriesSort, 5000)
         })
     },
     methods: {

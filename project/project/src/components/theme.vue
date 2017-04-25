@@ -38,7 +38,12 @@ export default {
             description: '',
             name: '',
             image_source: '',
-            stories: [{id: '', title: '', images: '', ifImage: false}]
+            stories: [{
+                id: '',
+                title: '',
+                images: '',
+                ifImage: false
+            }]
         }
     },
     created: function () {
@@ -58,7 +63,6 @@ export default {
                 }
             }
             self.stories = res.data.stories
-            console.log(self.stories)
         })
     },
     methods: {

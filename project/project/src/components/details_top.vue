@@ -59,17 +59,27 @@ export default{
     data: function () {
         return {
             detailId: '',
-            detailContent: {body: '', image: '', title: '', image_source: ''},
+            detailContent: {
+                body: '',
+                image: '',
+                title: '',
+                image_source: ''
+            },
             isShowWith: false,
             isCollect: false,
             isZhezhao: false,
             isDianzhan: false,
-            extraDetail: {'long_comments': '', 'popularity': '', 'short_comments': '', 'comments': ''}
+            extraDetail: {
+                long_comments: '',
+                popularity: '',
+                short_comments: '',
+                comments: ''
+            }
         }
     },
     methods: {
         back: function () {    // 返回主界面
-            router.push('/home')
+            router.go(-1)
         },
         changeImageUrl: function (srcUrl) {
             if (srcUrl !== undefined) {
