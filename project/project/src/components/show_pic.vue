@@ -89,6 +89,7 @@ export default{
     }
 	.circlechange {
 		background-color: #fff;
+        opacity: 1;
 	}
 	.showpic {
         margin-top: 3rem;
@@ -132,5 +133,6 @@ export default{
 		height: 0.4rem;
 		border-radius: 0.3rem;
 		background-color: #333;
+        opacity: 0.3;
 	}
 </style>
